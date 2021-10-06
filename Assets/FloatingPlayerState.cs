@@ -38,5 +38,10 @@ public class FloatingPlayerState : IPlayerState
             FallingPlayerState fallingPlayerState = new FallingPlayerState();
             fallingPlayerState.Enter(player);
         }
+        else if (Input.GetKeyDown("r"))
+        {
+            ReduceToAtomsPlayerState reduceToAtomsPlayerState = new ReduceToAtomsPlayerState();
+            reduceToAtomsPlayerState.Enter(player);
+        }
     }
 }
