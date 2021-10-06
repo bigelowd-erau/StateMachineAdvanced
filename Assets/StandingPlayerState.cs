@@ -12,7 +12,7 @@ public class StandingPlayerState : IPlayerState
 
     public void Execute(Player player)
     {
-        if (Input.GetKey("w"))
+        if (Input.GetKeyDown("w"))
         {
             JumpingPlayerState jumpingPlayerState = new JumpingPlayerState();
             jumpingPlayerState.Enter(player);

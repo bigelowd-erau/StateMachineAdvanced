@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DivingPlayerState : IPlayerState
 {
-    private const float diveStrength = 7f;
+    private const float diveSpeed = 7f;
 
     public void Enter(Player player)
     {
 
         //player.GetComponent<Rigidbody>().velocity = new Vector3(0f, jumpStrength, 0f);// .AddForce(0f, 1000f, 0f);
-        player.GetComponent<Rigidbody>().AddForce(Vector3.down * diveStrength, ForceMode.Impulse);
-        Debug.Log("Entering jumping State");
+        player.GetComponent<Rigidbody>().velocity = Vector3.down * diveSpeed; //.AddForce(Vector3.down * diveStrength, ForceMode.Impulse);
+        Debug.Log("Entering Diving State");
         //timeSinceJumpStart = Time.time;
         player._currentState = this;
     }

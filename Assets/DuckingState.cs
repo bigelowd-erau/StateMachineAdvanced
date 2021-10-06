@@ -19,6 +19,12 @@ public class DuckingPlayerState : IPlayerState
             player.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             StandingPlayerState standingPlayerState = new StandingPlayerState();
             standingPlayerState.Enter(player);
+        } 
+        else if(Input.GetKeyDown("w"))
+        {
+            player.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            SuperJumpPlayerState superJumpPlayerState = new SuperJumpPlayerState();
+            superJumpPlayerState.Enter(player);
         }
     }
 }
