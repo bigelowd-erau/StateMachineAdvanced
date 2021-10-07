@@ -18,7 +18,7 @@ public class SuperJumpPlayerState : IPlayerState
     public void Execute(Player player)
     {
         //if object nolonger in contact with the floor
-        if (!Physics.Raycast(player.transform.position, Vector3.down, player.transform.localScale.x * 3f))
+        if (!Physics.Raycast(player.transform.position, Vector3.down, player.transform.localScale.x * .52f * 2f))
         {
             FallingPlayerState fallingPlayerState = new FallingPlayerState();
             fallingPlayerState.Enter(player);
