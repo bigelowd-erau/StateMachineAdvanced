@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FloatingPlayerState : IPlayerState
 {
@@ -11,6 +12,7 @@ public class FloatingPlayerState : IPlayerState
     public void Enter(Player player)
     {
         //player.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Floating";
         Debug.Log("Entering Floating State");
         initialHeight = player.transform.position.y;
         player.GetComponent<Rigidbody>().useGravity = false;

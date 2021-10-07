@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StandingPlayerState : IPlayerState
 {
     public void Enter(Player player)
     {
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Standing";
         Debug.Log("Entering Standing State");
         player._currentState = this;
     }

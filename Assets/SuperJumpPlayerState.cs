@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SuperJumpPlayerState : IPlayerState
 {
@@ -9,6 +10,7 @@ public class SuperJumpPlayerState : IPlayerState
     public void Enter(Player player)
     {
         player.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Super Jumping";
         Debug.Log("Entering Super Jump State");
         player._currentState = this;
     }

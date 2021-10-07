@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReduceToAtomsPlayerState : IPlayerState
 {
     // Start is called before the first frame update
     public void Enter(Player player)
     {
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Reduce to Atoms";
         Debug.Log("Entering Standing State");
         player._currentState = this;
     }

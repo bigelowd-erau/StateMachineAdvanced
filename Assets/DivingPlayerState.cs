@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DivingPlayerState : IPlayerState
 {
@@ -11,6 +12,7 @@ public class DivingPlayerState : IPlayerState
 
         //player.GetComponent<Rigidbody>().velocity = new Vector3(0f, jumpStrength, 0f);// .AddForce(0f, 1000f, 0f);
         player.GetComponent<Rigidbody>().velocity = Vector3.down * diveSpeed; //.AddForce(Vector3.down * diveStrength, ForceMode.Impulse);
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Diving";
         Debug.Log("Entering Diving State");
         //timeSinceJumpStart = Time.time;
         player._currentState = this;

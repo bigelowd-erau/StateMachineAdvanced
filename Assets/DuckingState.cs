@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class DuckingPlayerState : IPlayerState
 {
     public void Enter(Player player)
     {
         player.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Ducking";
         Debug.Log("Entering Ducking State");
         player._currentState = this;
     }

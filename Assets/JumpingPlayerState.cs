@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JumpingPlayerState : IPlayerState
 {
@@ -9,6 +10,7 @@ public class JumpingPlayerState : IPlayerState
     public void Enter(Player player)
     {
         player.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Jumping";
         Debug.Log("Entering Jumping State");
         player._currentState = this;
     }
