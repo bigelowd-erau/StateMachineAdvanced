@@ -1,1 +1,2 @@
 # StateMachineAdvanced
+![screenshot] (StateDiagram.png)
