@@ -8,7 +8,7 @@ public class ReduceToAtomsPlayerState : IPlayerState
     // Start is called before the first frame update
     public void Enter(Player player)
     {
-        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Reduce to Atoms";
+        GameObject.FindGameObjectWithTag("PlayerStateText").GetComponent<Text>().text = "Gone, Reduced to Atoms";
         Debug.Log("Entering Standing State");
         player._currentState = this;
     }
